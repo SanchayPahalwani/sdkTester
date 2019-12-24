@@ -31,7 +31,7 @@ class ViewController: UIViewController {
          
         cc.putAddressMap(newAddressMap: addressMap, onResponse: putAddressMapSuccess(putAddressMapResponse:), onErrorResponse: putAddressMapError(cruxError:))
         cc.resolveCurrencyAddressForCruxID(fullCruxID: "shree_dhar@zel.crux", walletCurrencySymbol: "btc", onResponse: resolveCurrencyAddressForCruxIDSuccess(address: ), onErrorResponse: resolveCurrencyAddressForCruxIDError(cruxError:))
-        cc.registerCruxID(cruxIDSubdomain: "alice", onResponse: registerCruxIDSuccess, onErrorResponse: registerCruxIDError(cruxError:))
+//        cc.registerCruxID(cruxIDSubdomain: "alice", onResponse: registerCruxIDSuccess, onErrorResponse: registerCruxIDError(cruxError:))
     }
     
     func getCruxIDStateSuccess(cruxState: CruxIDState) -> () {
