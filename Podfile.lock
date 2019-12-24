@@ -1,0 +1,23 @@
+PODS:
+  - CruxPay (0.0.1):
+    - CryptoSwift (= 0.15.0)
+  - CryptoSwift (0.15.0)
+
+DEPENDENCIES:
+  - CruxPay (from `~/Work/iOS/CruxPay`)
+
+SPEC REPOS:
+  trunk:
+    - CryptoSwift
+
+EXTERNAL SOURCES:
+  CruxPay:
+    :path: "~/Work/iOS/CruxPay"
+
+SPEC CHECKSUMS:
+  CruxPay: 1ece1844fa17441b7af890b4badd574524edc4cd
+  CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
+
+PODFILE CHECKSUM: a981fdbcb8561d2f62db63e41d00f9dbb648cd56
+
+COCOAPODS: 1.8.4
