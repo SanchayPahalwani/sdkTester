@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     func initializeCrux() {
         let configBuilder = CruxClientInitConfig.Builder()
         configBuilder.setWalletClientName(walletClientName: "cruxdev")
-//        configBuilder.setPrivateKey(privateKey: "cdf2d276caf0c9c34258ed6ebd0e60e0e8b3d9a7b8a9a717f2e19ed9b37f7c6f")
+        configBuilder.setPrivateKey(privateKey: "cdf2d276caf0c9c34258ed6ebd0e60e0e8b3d9a7b8a9a717f2e19ed9b37f7c6f")
         let cc = CruxClient(configBuilder: configBuilder)
         
 
