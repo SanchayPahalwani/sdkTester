@@ -19,11 +19,16 @@ class ViewController: UIViewController {
     
     func initializeCrux() {
         let configBuilder = CruxClientInitConfig.Builder()
-        configBuilder.setWalletClientName(walletClientName: "cruxdev")
+        configBuilder.setWalletClientName(walletClientName: "magnum")
         configBuilder.setPrivateKey(privateKey: "cdf2d276caf0c9c34258ed6ebd0e60e0e8b3d9a7b8a9a717f2e19ed9b37f7c6f")
-        let cc = CruxClient(configBuilder: configBuilder)
+        var cc: CruxClient
+        do {
+            cc = try CruxClient(configBuilder: configBuilder)
+        } catch {
+            print("unsafe env detected")
+            return;
+        }
         
-
         cc.getCruxIDState(onResponse: getCruxIDStateSuccess(cruxState:), onErrorResponse: getCruxError(cruxError:))
         cc.isCruxIDAvailable(cruxIDSubdomain: "test123", onResponse: isCruxIDAvailableSuccess(cruxIDAvailable:), onErrorResponse: isCruxIDAvailableError(cruxError:))
         cc.getAddressMap(onResponse: getAddressMapSuccess(addressMap:), onErrorResponse: getAddressMapError(cruxError:))
